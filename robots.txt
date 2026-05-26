@@ -1,0 +1,24 @@
+# robots.txt
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Reference sitemap
+Sitemap: https://yaffashop2016-dev.github.io/sitemap.xml
+
+# Disallow certain files/directories if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1
