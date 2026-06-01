@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【從零開始存好股】第二堂：帳戶配置——工欲善其事，必先利其「戶」</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts 導入明體與黑體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome 圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cream: '#FCF8F2',     // 溫暖奶油底色
+                            peach: '#FCEAE6',     // 溫柔蜜桃粉
+                            sage: '#E2ECE9',      // 莫蘭迪鼠尾草綠
+                            blue: '#E3EDF5',      // 沉穩霧藍
+                            accent: '#D98A72',    // 溫暖主色調 (粉橘)
+                            dark: '#4A433F',      // 深炭暖褐 (取代死黑)
+                            leaf: '#7FA695'       // 點綴灰綠
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        serif: ['Noto Serif TC', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FCF8F2;
+            color: #4A433F;
+        }
+        .serif-title {
+            font-family: 'Noto Serif TC', serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-brand-peach selection:text-brand-dark">
+
+    <!-- 頂部頁首導覽 -->
+    <header class="sticky top-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-peach/50 py-4 px-6">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xs bg-brand-accent text-white px-2 py-1 rounded-full font-bold">課程 02</span>
+                <span class="font-bold tracking-wider text-brand-dark serif-title text-lg">從零開始存好股</span>
+            </div>
+            <div class="text-xs text-slate-500">
+                更新於 2026年5月31日
+            </div>
+        </div>
+    </header>
+
+    <!-- 核心內容包裝 -->
+    <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 md:px-8">
+        
+        <!-- 麵包屑導航 (SEO 友善) -->
+        <nav class="text-xs text-gray-500 mb-6 flex space-x-2" aria-label="Breadcrumb">
+            <span class="hover:text-brand-accent transition">首頁</span>
+            <span>&gt;</span>
+            <span class="hover:text-brand-accent transition">投資新手教學</span>
+            <span>&gt;</span>
+            <span class="text-brand-dark font-medium">第二堂：帳戶配置</span>
+        </nav>
+
+        <!-- 文章標題區 -->
+        <header class="mb-10 text-center sm:text-left">
+            <div class="inline-block text-brand-leaf font-bold tracking-wide text-sm bg-brand-sage px-3 py-1 rounded-full mb-3">
+                第二堂課：帳戶配置
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-dark serif-title leading-tight mb-4">
+                工欲善其事，必先利其「戶」
+            </h1>
+            <p class="text-md sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
+                投資是一場資產增值的馬拉松。既然要起跑，就必須穿上合適的跑鞋——這雙跑鞋，就是您的股票交易帳戶。
+            </p>
+        </header>
+
+        <!-- 投資風險聲明卡片 (溫和淡粉) -->
+        <div class="bg-brand-peach border-l-4 border-brand-accent rounded-r-2xl p-5 mb-10 shadow-sm" role="alert">
+            <div class="flex space-x-3">
+                <div class="text-brand-accent flex-shrink-0 mt-0.5">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-brand-dark mb-1">投資風險聲明</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        本文僅為個人投資學習紀錄與心得分享，不構成任何投資建議。文中提及之股票、ETF、抽籤或交易方式，皆為個人實際操作經驗分享。投資有風險，市場價格可能上漲或下跌，獲利與虧損均應由投資人自行承擔。投資前請充分了解相關風險，並依自身財務狀況審慎評估。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 核心內文區 -->
+        <article class="prose prose-stone max-w-none space-y-12">
+            
+            <!-- 一、股票帳戶的三大支柱 -->
+            <section class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-peach/30 transition-transform hover:shadow-md">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-6">
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-bold serif-title text-brand-dark flex items-center gap-2">
+                            <span class="text-brand-accent text-3xl">一、</span>股票帳戶的三大支柱
+                        </h2>
+                        <p class="text-gray-600 text-sm mt-2">
+                            買股票不像在超市購物刷了卡就走，它背後涉及「下單、扣款、領貨」三個環節：
+                        </p>
+                    </div>
+                    <!-- SVG 插圖：三大支柱示意圖 -->
+                    <div class="w-full md:w-56 h-32 flex justify-center items-center bg-brand-blue rounded-2xl p-4">
+                        <svg class="w-full h-full text-brand-dark" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="30" width="50" height="60" rx="6" fill="#FCEAE6" stroke="#4A433F" stroke-width="2"/>
+                            <circle cx="40" cy="50" r="8" fill="#D98A72"/>
+                            <line x1="25" y1="75" x2="55" y2="75" stroke="#4A433F" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="25" y1="83" x2="45" y2="83" stroke="#4A433F" stroke-width="2" stroke-linecap="round"/>
+                            
+                            <path d="M100 40H140V90H100V40Z" fill="#E2ECE9" stroke="#4A433F" stroke-width="2" stroke-linejoin="round"/>
+                            <circle cx="120" cy="65" r="12" fill="#7FA695" stroke="#4A433F" stroke-width="2"/>
+                            <path d="M120 58V72" stroke="white" stroke-width="2"/>
+                            <path d="M115 65H125" stroke="white" stroke-width="2"/>
+
+                            <rect x="175" y="30" width="50" height="60" rx="6" fill="#FCF8F2" stroke="#4A433F" stroke-width="2"/>
+                            <polygon points="200,42 215,57 185,57" fill="#D98A72"/>
+                            <rect x="185" y="65" width="30" height="15" rx="3" fill="#E2ECE9" stroke="#4A433F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-brand-cream border border-brand-peach/50 rounded-2xl p-5 hover:border-brand-accent transition">
+                        <div class="w-8 h-8 rounded-full bg-brand-peach flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-desktop text-brand-accent text-sm"></i>
+                        </div>
+                        <h4 class="font-bold text-md text-brand-dark mb-1">1. 證券戶 (交易窗口)</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            與證券商往來的帳戶。作用是讓您買賣股票、ETF、債券等，就像是進入股市的「通行證」或「下單櫃檯」。
+                        </p>
+                    </div>
+                    <div class="bg-brand-cream border border-brand-peach/50 rounded-2xl p-5 hover:border-brand-leaf transition">
+                        <div class="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-wallet text-brand-leaf text-sm"></i>
+                        </div>
+                        <h4 class="font-bold text-md text-brand-dark mb-1">2. 交割戶 (金流錢包)</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            處理股款進出的銀行帳戶（款項劃撥帳戶）。買股扣款、賣股匯入款，皆自動由此處操作。
+                        </p>
+                    </div>
+                    <div class="bg-brand-cream border border-brand-peach/50 rounded-2xl p-5 hover:border-brand-dark/30 transition">
+                        <div class="w-8 h-8 rounded-full bg-brand-blue flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-warehouse text-slate-600 text-sm"></i>
+                        </div>
+                        <h4 class="font-bold text-md text-brand-dark mb-1">3. 集保戶 (資產倉庫)</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            由「臺灣集中保管結算所」電子化保管您所有的股票。即使券商倒閉，您的股票資產依然安全存放在這裡。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 二、2026 數位新選擇：什麼是「分戶帳」？ -->
+            <section class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-peach/30">
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-6">
+                    <!-- SVG 插圖：分戶帳虛擬錢包 -->
+                    <div class="w-full md:w-1/3 h-40 bg-brand-sage rounded-2xl p-4 flex justify-center items-center">
+                        <svg class="w-full h-full text-brand-dark" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="30" width="120" height="80" rx="12" fill="#E3EDF5" stroke="#4A433F" stroke-width="2"/>
+                            <rect x="40" y="50" width="120" height="20" fill="#7FA695" />
+                            <circle cx="130" cy="85" r="15" fill="#D98A72" stroke="#4A433F" stroke-width="2"/>
+                            <path d="M127 80V90" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M123 85H137" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <text x="50" y="90" font-family="sans-serif" font-weight="bold" fill="#4A433F" font-size="12">e-Wallet</text>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-bold serif-title text-brand-dark flex items-center gap-2">
+                            <span class="text-brand-accent text-3xl">二、</span>什麼是「分戶帳」？
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mt-2">
+                            身為忙碌的族群，不想為了買股票再多開一個新的銀行帳戶？這時，<strong class="text-brand-accent">「分戶帳」（資金管理帳戶）</strong> 就是您的救星！它像是在證券商端設立的一個「虛擬資金錢包」，投資人可以直接約定現有的常用銀行帳戶（如薪轉戶）作為出入金管道。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-brand-cream/60 rounded-2xl p-5 border border-brand-peach/40">
+                        <span class="inline-block px-2 py-0.5 rounded text-xs bg-brand-sage text-brand-leaf font-bold mb-2">優勢 1</span>
+                        <h4 class="font-bold text-md mb-1">免另開銀行戶</h4>
+                        <p class="text-xs text-gray-500">
+                            可以直接約定您現有的常用銀行帳戶。大幅節省帳戶管理的繁雜手續。
+                        </p>
+                    </div>
+                    <div class="bg-brand-cream/60 rounded-2xl p-5 border border-brand-peach/40">
+                        <span class="inline-block px-2 py-0.5 rounded text-xs bg-brand-sage text-brand-leaf font-bold mb-2">優勢 2</span>
+                        <h4 class="font-bold text-md mb-1">管理更有效率</h4>
+                        <p class="text-xs text-gray-500">
+                            不需要在多個銀行帳戶間搬移資金。只要從慣用銀行匯款到分戶帳，就能開始下單。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-xs text-gray-500 italic bg-brand-blue/30 rounded-lg p-3">
+                    <strong>常見券商方案：</strong>例如凱基證券稱之為「e財庫」；永豐金證券則提供免開銀行戶、直接約定常用銀行的功能，最快隔天就能下單。
+                </div>
+            </section>
+
+            <!-- 三、開戶方式與實戰準備 -->
+            <section class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-peach/30">
+                <h2 class="text-2xl font-bold serif-title text-brand-dark mb-6 flex items-center gap-2">
+                    <span class="text-brand-accent text-3xl">三、</span>開戶方式與實戰準備
+                </h2>
+
+                <!-- 開戶比較表格 -->
+                <div class="overflow-x-auto rounded-2xl border border-brand-peach/50 mb-6">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-brand-peach/50 text-brand-dark text-xs sm:text-sm">
+                                <th class="p-4 font-bold border-b border-brand-peach/50">開戶方式</th>
+                                <th class="p-4 font-bold border-b border-brand-peach/50">流程說明</th>
+                                <th class="p-4 font-bold border-b border-brand-peach/50">優點</th>
+                                <th class="p-4 font-bold border-b border-brand-peach/50">適合誰</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-peach/20 text-xs sm:text-sm text-gray-600">
+                            <tr class="hover:bg-brand-cream/30">
+                                <td class="p-4 font-bold text-brand-accent">線上開戶</td>
+                                <td class="p-4">透過券商官網或 App 上傳證件、填寫資料，並進行視訊驗證。</td>
+                                <td class="p-4 font-semibold text-brand-leaf">最推薦！24小時皆可申請，最快隔天就能下單。</td>
+                                <td class="p-4">忙碌、不方便請假的上班族。</td>
+                            </tr>
+                            <tr class="hover:bg-brand-cream/30">
+                                <td class="p-4 font-bold text-brand-dark">臨櫃開戶</td>
+                                <td class="p-4">攜帶雙證件、印章及現金，親自到券商分公司辦理。</td>
+                                <td class="p-4">專人服務，有疑問可當場諮詢，流程最穩健。</td>
+                                <td class="p-4">需要面對面指導的新手父母。</td>
+                            </tr>
+                            <tr class="hover:bg-brand-cream/30">
+                                <td class="p-4 font-bold text-brand-dark">預約外開</td>
+                                <td class="p-4">與營業員約定地點（如咖啡廳）完成開戶文件簽署。</td>
+                                <td class="p-4">兼具便利性與專人服務。</td>
+                                <td class="p-4">偏好專人服務但沒時間進分行的人。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 開戶必備清單 -->
+                <div class="bg-brand-cream rounded-2xl p-6 border border-brand-peach/50">
+                    <h3 class="font-bold text-brand-dark text-lg mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-brand-accent"></i> 開戶必備資料清單
+                    </h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent"></span> 身分證（正本）
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent"></span> 第二證件（健保卡或駕照）
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent"></span> 印章（臨櫃開戶才需要）
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent"></span> 銀行帳戶資料（或常用銀行存摺影本）
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 四、新手父母必看：如何幫孩子開戶、存教育基金？ -->
+            <section class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-peach/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-peach rounded-full -mr-16 -mt-16 opacity-40"></div>
+                
+                <h2 class="text-2xl font-bold serif-title text-brand-dark mb-6 flex items-center gap-2">
+                    <span class="text-brand-accent text-3xl">四、</span>新手父母必看：幫孩子存教育基金
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="text-brand-accent mt-1"><i class="fa-solid fa-child-reaching text-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-md text-brand-dark">未成年開戶規定</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">
+                                    未滿 18 歲的子女開戶，必須由父母（法定代理人）陪同至現場辦理（部分券商提供線上輔助流程，但仍需父母進行身份核驗）。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="text-brand-accent mt-1"><i class="fa-solid fa-chart-line-up text-lg"></i></div>
+                            <div>
+                                <h4 class="font-bold text-md text-brand-dark">長期複利的巨大威力</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">
+                                    如果孩子一出生就透過定期定額投入優質企業或大盤型 ETF，在長達 18 年的複利滾動下，資產成長將非常驚人。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 稅務優惠思考箱 -->
+                    <div class="bg-brand-sage/40 rounded-2xl p-5 border border-brand-sage">
+                        <h4 class="font-bold text-brand-dark text-md mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-percent text-brand-leaf"></i> 聰明資產傳承：稅務思考
+                        </h4>
+                        <div class="space-y-3 text-xs text-gray-600">
+                            <p>
+                                <strong>資產歸屬：</strong>資金匯入孩子帳戶後即視為孩子的資產，投資獲利與股息皆屬於孩子名下，能有效降低父母未來的遺產稅與贈與稅負擔。
+                            </p>
+                            <p>
+                                <strong>稅務優點：</strong>孩子的個人所得通常較低，領取的股息在申報綜合所得稅時，往往能適用較低的稅率，甚至享有退稅優勢。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 五、專家觀點：該如何挑選適合您的證券商？ -->
+            <section class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-peach/30">
+                <h2 class="text-2xl font-bold serif-title text-brand-dark mb-6 flex items-center gap-2">
+                    <span class="text-brand-accent text-3xl">五、</span>該如何挑選適合您的證券商？
+                </h2>
+                <p class="text-sm text-gray-500 mb-6">
+                    新手父母與上班族，建議從以下這三個關鍵維度來篩選：
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-brand-cream rounded-2xl p-5 border border-brand-peach/30 flex flex-col justify-between">
+                        <div>
+                            <div class="text-brand-accent text-2xl mb-3"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h4 class="font-bold text-brand-dark mb-2">1. 下單 App 的好用度</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                介面是否直觀？是否有「定期定額」功能？是否有豐富的產業報告？好的 App 應該能幫您在通勤或育兒空檔，3 分鐘完成投資配置。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-brand-cream rounded-2xl p-5 border border-brand-peach/30 flex flex-col justify-between">
+                        <div>
+                            <div class="text-brand-leaf text-2xl mb-3"><i class="fa-solid fa-tags"></i></div>
+                            <h4 class="font-bold text-brand-dark mb-2">2. 手續費折扣與低消</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                雖然台股手續費公定價為 0.1425%，但對於交易量不大的零股投資，務必注意「最低手續費」門檻。建議挑選提供「零股手續費最低 1 元」優惠的券商。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-brand-cream rounded-2xl p-5 border border-brand-peach/30 flex flex-col justify-between">
+                        <div>
+                            <div class="text-slate-500 text-2xl mb-3"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h4 class="font-bold text-brand-dark mb-2">3. 實體據點便利性</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                雖然大多線上處理，但若遇到印鑑遺失、繼承或重大帳務爭議，離住家或辦公室近的據點能省下大量交通時間與機會成本。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 六、帳戶安全與交易規則 T+2 (強烈黃/粉警告風格，但溫和呈現) -->
+            <section class="bg-[#FAF3E0] rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-accent/20">
+                <div class="flex flex-col md:flex-row items-center gap-6 justify-between mb-6">
+                    <div class="flex-1">
+                        <span class="bg-brand-accent text-white px-2.5 py-0.5 rounded text-xs font-bold mb-2 inline-block">極重要交易規則</span>
+                        <h2 class="text-2xl font-bold serif-title text-brand-dark">
+                            帳戶安全：絕不能犯的 T+2 規則
+                        </h2>
+                        <p class="text-sm text-gray-600 mt-2">
+                            戶頭沒有錢，買進股票會構成<strong>「違約交割」</strong>。
+                        </p>
+                    </div>
+                    <!-- SVG：T+2 倒數計時意象 -->
+                    <div class="w-full md:w-48 h-24 bg-white/70 rounded-2xl p-4 flex justify-center items-center">
+                        <svg class="w-full h-full text-brand-dark" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="40" height="40" rx="8" fill="#FCEAE6" stroke="#4A433F" stroke-width="2"/>
+                            <text x="18" y="45" font-family="sans-serif" font-weight="bold" fill="#D98A72" font-size="16">T日</text>
+                            
+                            <line x1="58" y1="40" x2="72" y2="40" stroke="#4A433F" stroke-width="2" stroke-linecap="round"/>
+                            
+                            <rect x="80" y="20" width="40" height="40" rx="8" fill="#E2ECE9" stroke="#4A433F" stroke-width="2"/>
+                            <text x="85" y="45" font-family="sans-serif" font-weight="bold" fill="#7FA695" font-size="14">T+1</text>
+                            
+                            <line x1="128" y1="40" x2="142" y2="40" stroke="#4A433F" stroke-width="2" stroke-linecap="round"/>
+                            
+                            <rect x="150" y="20" width="40" height="40" rx="8" fill="#D98A72" stroke="#4A433F" stroke-width="2"/>
+                            <text x="155" y="45" font-family="sans-serif" font-weight="bold" fill="white" font-size="14">T+2</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- T+2 交割機制互動工具 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-peach/50 mb-6">
+                    <h3 class="font-bold text-sm text-brand-dark mb-3"><i class="fa-solid fa-calculator text-brand-accent mr-1"></i> T+2 扣款時間計算機</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-500 mb-1">請選擇您的「下單日 (T日)」</label>
+                            <select id="t-day-select" class="w-full border border-gray-200 rounded-lg p-2 text-sm bg-brand-cream/40 focus:outline-none focus:ring-1 focus:ring-brand-accent" onchange="calculateDelivery()">
+                                <option value="Mon">星期一</option>
+                                <option value="Tue">星期二</option>
+                                <option value="Wed">星期三</option>
+                                <option value="Thu">星期四</option>
+                                <option value="Fri">星期五</option>
+                            </select>
+                        </div>
+                        <div class="bg-brand-peach/30 p-3 rounded-xl flex flex-col justify-center">
+                            <span class="text-xs text-gray-500">最遲需在以下時間存足金額：</span>
+                            <span id="delivery-result" class="text-sm font-bold text-brand-accent mt-1">週三 上午 10:00 前</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-xs text-gray-600 leading-relaxed">
+                    <p>
+                        <strong>T+2 交割制度：</strong>假設您在「週一」下單買進（此為 T 日），您必須在<strong>「週三」上午 10:00 前</strong>，確保您的交割戶（或分戶帳）裡有足夠的錢扣款。
+                    </p>
+                    <p class="text-red-700 font-semibold bg-red-50 p-2.5 rounded-lg border border-red-100">
+                        <strong>⚠️ 違約交割的後果：</strong>若扣款失敗即構成「違約交割」。這會讓您的個人信用評分留下嚴重汙點，未來申請房貸、信貸或信用卡時會極其困難，情節嚴重者還需負法律責任。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 七、進階預告：信用交易與槓桿 -->
+            <section class="bg-brand-cream rounded-3xl p-6 sm:p-8 border border-brand-peach/40">
+                <h2 class="text-xl font-bold serif-title text-brand-dark mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-shuffle text-brand-leaf"></i> 七、進階預告：信用交易與槓桿
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    當您的帳戶開立滿三個月，且成交筆數達到一定標準後，您可以考慮申請「信用戶」。這讓您可以進行「融資」（向券商借錢買股）或「融券」（向券商借股票賣出）。
+                </p>
+                <div class="mt-3 bg-brand-sage/50 text-brand-leaf font-bold p-3 rounded-xl text-xs">
+                    💡 溫馨提醒：對於 30-40 歲追求穩健的您，建議先打好基礎，我們會在後面的課堂詳細討論風險控管，新手切忌輕易動用槓桿交易。
+                </div>
+            </section>
+
+        </article>
+
+        <!-- 本課重點回顧摘要卡 -->
+        <section class="mt-12 bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-brand-peach/30">
+            <h3 class="font-bold serif-title text-lg text-brand-dark mb-4 border-b border-brand-peach/40 pb-2">
+                📌 本堂重點回顧
+            </h3>
+            <ul class="space-y-3 text-sm text-gray-600">
+                <li class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded-full bg-brand-peach text-brand-accent flex items-center justify-center text-xs font-bold mt-0.5">1</span>
+                    <span><strong>三大帳戶職責：</strong>證券（下單）、交割（付錢）、集保（領貨）。</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded-full bg-brand-sage text-brand-leaf flex items-center justify-center text-xs font-bold mt-0.5">2</span>
+                    <span><strong>分戶帳利器：</strong>適合忙碌族，免開新銀行戶，綁定既有帳戶最輕鬆。</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded-full bg-brand-blue text-slate-600 flex items-center justify-center text-xs font-bold mt-0.5">3</span>
+                    <span><strong>父母存股第一步：</strong>及早為子女開戶，藉由長達18年的時間複利滾出教育基金。</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xs font-bold mt-0.5">4</span>
+                    <span><strong>信用是第二生命：</strong>切記 T+2 交割時間點，避免因粗心造成違約交割。</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 頁尾預告與互動導覽區 -->
+        <section class="mt-12 border-t border-brand-peach/50 pt-8">
+            <div class="bg-brand-blue/40 rounded-3xl p-6 text-center">
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">NEXT LESSON</span>
+                <h4 class="text-xl font-bold serif-title text-brand-dark mt-1 mb-2">下一堂預告：新手容易犯的「手續費陷阱」</h4>
+                <p class="text-xs text-gray-500 max-w-md mx-auto mb-6">
+                    帳戶準備好了，下一步我們要了解「交易規則」。台股幾點可以下單？什麼是「零股」？我們第三堂見！
+                </p>
+                
+                <!-- 預留連結按鈕 -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="25-3.html" class="w-full sm:w-auto px-6 py-3 bg-brand-accent hover:bg-brand-accent/90 text-white rounded-full font-bold text-sm shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                        查看下一篇 <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://u.pcloud.link/publink/show?code=kZODnI5Zh28jaWfIM1F0mQI7Qpkc8fnicpPy" class="w-full sm:w-auto px-6 py-3 bg-white hover:bg-brand-cream border border-brand-accent/30 text-brand-dark rounded-full font-bold text-sm transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> 下載 PDF 資料
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁腳 -->
+    <footer class="bg-brand-dark text-brand-cream py-10 px-6 mt-16 text-center text-xs">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <div class="serif-title font-bold text-lg tracking-wider text-brand-peach">椏法工作室 | Yaffa Studio</div>
+            <p class="text-gray-400 max-w-md mx-auto">
+                致力於為新手父母與小資上班族提供最暖心、最易懂的理財啟蒙。
+            </p>
+            <div class="text-gray-500">
+                &copy; 2026 Yaffa Studio. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- T+2 計算機邏輯 -->
+    <script>
+        function calculateDelivery() {
+            const select = document.getElementById('t-day-select');
+            const resultText = document.getElementById('delivery-result');
+            const val = select.value;
+
+            let output = "";
+            switch(val) {
+                case "Mon":
+                    output = "週三 上午 10:00 前";
+                    break;
+                case "Tue":
+                    output = "週四 上午 10:00 前";
+                    break;
+                case "Wed":
+                    output = "週五 上午 10:00 前";
+                    break;
+                case "Thu":
+                    output = "下週一 上午 10:00 前 (遇週末順延)";
+                    break;
+                case "Fri":
+                    output = "下週二 上午 10:00 前 (遇週末順延)";
+                    break;
+                default:
+                    output = "週三 上午 10:00 前";
+            }
+            resultText.innerText = output;
+        }
+    </script>
+</body>
+</html>
