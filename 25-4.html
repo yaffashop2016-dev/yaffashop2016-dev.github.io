@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【從零開始存好股】第四堂：成本估算 | 新手股票投資教學</title>
+    <meta name="description" content="在投入股市前，一定要學會計算隱形成本！本堂課帶你拆解手續費、證交稅、二代健保與ETF內扣費用，別讓過路費吃掉你的獲利與孩子教育基金。">
+    <!-- 引入 Tailwind CSS 以便快速構建柔和優美的 UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-bg': '#FDFBF7',
+                        'soft-yellow': '#FFF7D6',
+                        'soft-mint': '#E0F4E8',
+                        'soft-peach': '#FFE5D9',
+                        'soft-lavender': '#EAE4F9',
+                        'soft-blue': '#E1F0FA',
+                        'text-main': '#4A4A4A',
+                        'text-dark': '#2C3E50',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang TC', 'LiHei Pro', 'Hiragino Sans GB', 'Microsoft JhengHei', Arial, sans-serif;
+            background-color: #FDFBF7;
+            color: #4A4A4A;
+        }
+        /* 自定義平滑陰影，增加立體感但不生硬 */
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+        }
+        mark {
+            background-color: #FFF7D6;
+            color: #2C3E50;
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed selection:bg-soft-peach selection:text-text-dark">
+
+    <main class="max-w-4xl mx-auto px-5 py-12 md:py-20">
+        
+        <!-- 文章標頭與SEO優化結構 -->
+        <article>
+            <header class="text-center mb-12">
+                <div class="inline-block bg-soft-blue text-blue-800 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                    大綱模組 ‧ 啟程與規則
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-text-dark leading-tight mb-6">
+                    【從零開始存好股】第四堂：成本估算<br>
+                    <span class="text-2xl md:text-3xl text-gray-500 block mt-3 font-medium">——別讓手續費與稅金吃掉您的孩子教育基金！</span>
+                </h1>
+                <div class="text-gray-400 text-sm flex items-center justify-center gap-4">
+                    <span>上次編輯時間：2026年6月1日</span>
+                    <span>來源：椏法工作室 | Yaffa Studio</span>
+                </div>
+            </header>
+
+            <!-- 風險聲明 (柔和黃色區塊) -->
+            <div class="bg-soft-yellow border-l-4 border-yellow-400 rounded-r-2xl p-6 mb-10 soft-shadow">
+                <h3 class="text-lg font-bold text-yellow-800 mb-2 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    投資風險聲明
+                </h3>
+                <p class="text-yellow-800/80 text-sm leading-relaxed">
+                    本文僅為個人投資學習紀錄與心得分享，不構成任何投資建議。文中提及之股票、ETF、抽籤或交易方式，皆為個人實際操作經驗分享。投資有風險，市場價格可能上漲或下跌，獲利與虧損均應由投資人自行承擔。投資前請充分了解相關風險，並依自身財務狀況審慎評估。
+                </p>
+            </div>
+
+            <!-- 前言 -->
+            <section class="mb-12 text-lg">
+                <p class="mb-4">在了解完「帳戶配置」與「交易規則」後，專為精打細算、希望為家庭開源節流所撰寫的第四堂課。在您準備投入資金前，一定要學會計算「隱形成本」，才不會讓辛苦賺的錢，還沒看到獲利就先被稅費吃掉一大半！</p>
+                <p class="mb-4">很多新手在買進第一支股票後，會發現交割戶頭扣的錢「怎麼比股價乘上股數還多一點點？」或者賣掉股票後，拿到的錢「怎麼縮水了？」</p>
+                <p class="mb-4">其實，股票交易並非只有「股價」本身，背後還有手續費、證交稅，甚至未來領股息時還有所得稅與二代健保。身為上有老、下有小的 30-40 歲中流砥柱，每一分錢的流向都至關重要。</p>
+                <p class="font-bold text-text-dark text-xl text-center bg-white py-4 rounded-xl soft-shadow mt-6">
+                    今天我們就來拆解這些「股市過路費」，教您如何算出最精確的投資損益！
+                </p>
+            </section>
+
+            <!-- 內容區塊 1 -->
+            <section class="bg-white rounded-3xl p-8 mb-8 soft-shadow border-t-8 border-soft-mint relative overflow-hidden">
+                <!-- 裝飾用 SVG -->
+                <svg class="absolute top-0 right-0 text-soft-mint w-32 h-32 -mr-8 -mt-8 opacity-50" viewBox="0 0 100 100" fill="currentColor">
+                    <circle cx="50" cy="50" r="40" />
+                </svg>
+                
+                <h2 class="text-2xl font-bold text-text-dark mb-6 relative z-10 flex items-center gap-3">
+                    <div class="bg-soft-mint p-2 rounded-xl text-teal-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg>
+                    </div>
+                    一、買賣必繳：證券商的手續費 (Brokerage Fee)
+                </h2>
+                <div class="relative z-10 space-y-4">
+                    <p>手續費是您交給證券商的「服務費」。不論您是買進還是賣出，券商都會各收一次。</p>
+                    <ul class="list-disc list-inside space-y-3 text-gray-600 ml-2">
+                        <li><strong class="text-text-dark">公定費率：</strong>台灣股市手續費的公定上限是成交金額的 <mark>0.1425%</mark>。</li>
+                        <li>
+                            <strong class="text-text-dark">電子下單折扣：</strong>現代上班族大多使用 App 下單，大多數券商會提供 2.8 折到 6 折不等的折扣。
+                            <p class="text-sm bg-gray-50 p-3 rounded-lg mt-2 text-gray-500 border border-gray-100">💡 <strong>小提醒：</strong>如果您是投資大戶，甚至可以跟營業員談更低的折扣，但對新手來說，App 自帶的折扣就很有感了！</p>
+                        </li>
+                        <li>
+                            <strong class="text-red-500">小資族致命傷——「20元最低門檻」：</strong>這是新手最容易踩的坑！
+                            <ul class="list-none pl-6 mt-2 space-y-2 border-l-2 border-red-100">
+                                <li>👉 傳統規定手續費若不滿20元，一律按20元收取。</li>
+                                <li>👉 <strong>案例：</strong>您幫小孩存 1 股台積電(假設 1,000 元)，本來手續費只要 1.425 元，但若券商有 20 元底線，您的成本直接變成 2%！</li>
+                                <li>👉 <strong class="text-teal-600">專家建議：</strong>務必挑選提供 <mark>「零股手續費最低1元」</mark> 優惠的券商，這對每月定期定額 3,000-5,000 元的父母來說非常划算。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 內容區塊 2 -->
+            <section class="bg-white rounded-3xl p-8 mb-8 soft-shadow border-t-8 border-soft-peach relative overflow-hidden">
+                <h2 class="text-2xl font-bold text-text-dark mb-6 relative z-10 flex items-center gap-3">
+                    <div class="bg-soft-peach p-2 rounded-xl text-orange-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    二、賣出才收：證券交易稅 (Transaction Tax)
+                </h2>
+                <div class="relative z-10 space-y-4">
+                    <p>證交稅是交給政府的錢。這筆費用只有在<strong class="text-text-dark">「賣出股票」</strong>時才會收取。</p>
+                    <ol class="list-decimal list-inside space-y-3 text-gray-600 ml-2">
+                        <li><strong class="text-text-dark">一般股票費率：</strong>成交金額的 <mark>0.3%</mark>。</li>
+                        <li>
+                            <strong class="text-text-dark">ETF 優惠：</strong>為了推廣 ETF，政府規定 ETF 的證交稅僅收 <mark>0.1%</mark>。
+                            <p class="text-sm text-gray-500 mt-1 pl-6">這也是為什麼許多上班族偏好 0050 或 00878 的原因之一，因為交易成本更低！</p>
+                        </li>
+                        <li>
+                            <strong class="text-text-dark">當沖降稅：</strong>若您開通權限進行「現股當沖」(當天買、當天賣)，賣出的證交稅減半為 0.15%。
+                        </li>
+                    </ol>
+                    <div class="bg-rose-50 border border-rose-100 text-rose-800 p-4 rounded-xl mt-4 flex gap-3">
+                        <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <p class="text-sm"><strong>警告：</strong>雖然稅有優惠，但當沖風險極高，需要穩定現金流的請先略過此項目。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 內容區塊 3 -->
+            <section class="bg-white rounded-3xl p-8 mb-8 soft-shadow border-t-8 border-soft-lavender relative overflow-hidden">
+                <h2 class="text-2xl font-bold text-text-dark mb-6 relative z-10 flex items-center gap-3">
+                    <div class="bg-soft-lavender p-2 rounded-xl text-purple-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    三、領股息也有成本？所得稅與二代健保
+                </h2>
+                <div class="relative z-10 space-y-4">
+                    <p>常聽到人家說要為了教育基金「存股」領息。但請記住，領到的股息並非全額入袋，還得考慮以下兩項成本：</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                            <h4 class="font-bold text-lg text-purple-900 mb-3">1. 二代健保補充保費 (NHI Premium)</h4>
+                            <p class="text-gray-600 mb-3">如果「單筆」股利（含現金與股票股利）超過 20,000 元，會被預先扣除 <mark>2.11%</mark> 的費用。</p>
+                            <p class="text-sm bg-purple-100 text-purple-800 p-3 rounded-lg"><strong>💡 節稅小撇步：</strong>若不想被扣這筆錢，可以分散投資多檔季配息 ETF，讓單次領息金額低於 2 萬元。</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                            <h4 class="font-bold text-lg text-purple-900 mb-3">2. 個人所得稅</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                <li>股息收入會併入您的年度總所得課稅。</li>
+                                <li><strong class="text-text-dark">合併計稅：</strong>股息併入所得，但可享有 8.5% 的抵減稅額（上限 8 萬元）。對於所得稅率在 5% 或 12% 的上班族來說，領息甚至可能帶來「退稅」效果！</li>
+                                <li><strong class="text-text-dark">分離課稅：</strong>高收入族群可選擇股息採 28% 單一稅率計稅。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 內容區塊 4 -->
+            <section class="bg-white rounded-3xl p-8 mb-8 soft-shadow border-t-8 border-soft-blue relative overflow-hidden">
+                <h2 class="text-2xl font-bold text-text-dark mb-6 relative z-10 flex items-center gap-3">
+                    <div class="bg-soft-blue p-2 rounded-xl text-blue-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    四、ETF的隱藏成本：內扣費用 (Expense Ratio)
+                </h2>
+                <div class="relative z-10 space-y-4">
+                    <p>這是不必「掏錢」付，但會反映在股價裡的成本。ETF 既然是「懶人套餐」，就需要請專業投信來管理，這包含：</p>
+                    <ul class="flex flex-col sm:flex-row gap-4 my-4">
+                        <li class="bg-blue-50 px-4 py-3 rounded-lg flex-1 border border-blue-100">
+                            <strong class="block text-blue-800">💼 管理費 (經理費)</strong>
+                            <span class="text-sm text-gray-600">付給經理人選股的薪水。</span>
+                        </li>
+                        <li class="bg-blue-50 px-4 py-3 rounded-lg flex-1 border border-blue-100">
+                            <strong class="block text-blue-800">🏦 保管費</strong>
+                            <span class="text-sm text-gray-600">付給銀行保管股票的費用。</span>
+                        </li>
+                    </ul>
+                    <p>這些費用會直接從 ETF 的淨值中扣除。</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 ml-2">
+                        <li><strong>被動型 ETF (如 0050)：</strong>總費用率通常較低，約 0.32% - 0.46%。</li>
+                        <li><strong>高股息或主動式 ETF：</strong>因為需要頻繁調倉或主動選股，費用率可能落在 0.6% - 1% 甚至更高。</li>
+                    </ul>
+                    <p class="text-sm bg-gray-800 text-white p-3 rounded-lg mt-2 inline-block">
+                        ⚠️ <strong>專家提醒：</strong>長期持股超過 10 年，高費率會對報酬率產生明顯的侵蝕效果。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 實戰演練 -->
+            <section class="bg-text-dark text-white rounded-3xl p-8 mb-12 soft-shadow">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-soft-yellow">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    五、實戰演練：算算看，買進一筆股票要花多少錢？
+                </h2>
+                <div class="space-y-6 text-gray-200">
+                    <p class="text-lg">假設您看好<span class="text-soft-yellow font-bold">台積電 (代號2330)</span>，決定買進 100 股(零股)，股價為 1,000 元。</p>
+                    
+                    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                        <h3 class="text-soft-mint font-bold text-xl mb-4 border-b border-gray-700 pb-2">🛒 買入階段</h3>
+                        <ol class="list-decimal list-inside space-y-3">
+                            <li><span class="text-gray-400">股票成交價：</span>1,000元 × 100股 = <strong class="text-white">100,000元</strong></li>
+                            <li><span class="text-gray-400">買入手續費：</span>100,000元 × 0.1425% = <strong class="text-white">142.5元</strong>
+                                <p class="pl-6 text-sm text-gray-400 mt-1">假設您的券商電子下單打 6 折：142.5 × 0.6 = 85.5 元 (四捨五入為 <strong class="text-white">86元</strong>)。</p>
+                            </li>
+                            <li class="pt-2"><span class="text-soft-peach">總支出：</span>100,000 + 86 = <strong class="text-2xl text-soft-peach">100,086 元</strong></li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                        <h3 class="text-soft-peach font-bold text-xl mb-4 border-b border-gray-700 pb-2">📈 賣出階段 (一個月後股價漲到 1,100 元)</h3>
+                        <ol class="list-decimal list-inside space-y-3">
+                            <li><span class="text-gray-400">股票成交價：</span>1,100元 × 100股 = <strong class="text-white">110,000元</strong></li>
+                            <li><span class="text-gray-400">賣出手續費：</span>110,000元 × 0.1425% × 0.6 = <strong class="text-white">94元</strong> (約94.05四捨五入)</li>
+                            <li><span class="text-gray-400">賣出證交稅：</span>110,000元 × 0.3% = <strong class="text-white">330元</strong></li>
+                            <li class="pt-2"><span class="text-soft-mint">淨收入：</span>110,000 - 94 - 330 = <strong class="text-2xl text-soft-mint">109,576 元</strong></li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-soft-mint to-soft-blue text-text-dark rounded-2xl p-6 text-center shadow-lg">
+                        <p class="text-lg font-bold mb-1">最終獲利計算</p>
+                        <p class="text-3xl font-extrabold">109,576 - 100,086 = <span class="text-teal-700">9,490 元</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 金律與結論 -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-text-dark mb-6 flex items-center gap-3">
+                    <div class="bg-soft-yellow p-2 rounded-full text-yellow-700 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    六、給新手父母的「精省成本」金律
+                </h2>
+                
+                <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 soft-shadow flex items-start gap-4">
+                        <div class="text-2xl mt-1">🥇</div>
+                        <div>
+                            <strong class="block text-lg mb-1">首選「免最低手續費」券商</strong>
+                            <p class="text-gray-600 text-sm">既然是存零股，千萬別讓 20 元低消毀了您的複利。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 soft-shadow flex items-start gap-4">
+                        <div class="text-2xl mt-1">⏳</div>
+                        <div>
+                            <strong class="block text-lg mb-1">減少頻繁交易</strong>
+                            <p class="text-gray-600 text-sm">每一次買賣都是在交稅，對於忙碌的您，「買入並持有」才是省時又省錢的策略。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 soft-shadow flex items-start gap-4">
+                        <div class="text-2xl mt-1">🔍</div>
+                        <div>
+                            <strong class="block text-lg mb-1">注意 ETF 內扣費用</strong>
+                            <p class="text-gray-600 text-sm">選擇標的前，去官網查一下「總費用率」，別只看殖利率。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 soft-shadow flex items-start gap-4">
+                        <div class="text-2xl mt-1">🧾</div>
+                        <div>
+                            <strong class="block text-lg mb-1">善用合併計稅退稅</strong>
+                            <p class="text-gray-600 text-sm">低薪資所得的家庭，可以多領股息，在隔年報稅季爭取退稅。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-soft-bg border-2 border-soft-peach p-8 rounded-3xl text-center">
+                    <h3 class="text-2xl font-bold text-orange-900 mb-4">結語：聰明成本控制，讓資產增值更快速</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        掌握了成本估算，您就不再是被蒙在鼓裡的「韭菜」了。投資的獲利，不僅僅是股價的上漲，更來自於您對成本的精確掌控。
+                    </p>
+                    <p class="text-orange-800 font-medium text-lg">
+                        對於新手父母來說，省下的每一筆手續費，累積起來可能就是孩子的一套新繪本或是一堂才藝課！
+                    </p>
+                </div>
+            </section>
+
+            <!-- 重點回顧與預告 -->
+            <section class="bg-gray-50 rounded-3xl p-8 mb-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-dark mb-4 border-b-2 border-gray-200 pb-2">📝 本課重點回顧</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✅ <strong>買賣雙向：</strong>各收一次手續費(0.1425%)，記得看折扣。</li>
+                            <li>✅ <strong>賣出一向：</strong>收取證交稅(0.3%)，ETF有優惠(0.1%)。</li>
+                            <li>✅ <strong>零股關鍵：</strong>避開 20 元底標，尋找 1 元起手券商。</li>
+                            <li>✅ <strong>內扣隱形成本：</strong>挑選低總費用率的 ETF 作為核心配置。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">🔜 下一堂預告</h3>
+                        <p class="text-gray-600 text-sm mb-3">成本算清楚了，下一步我們要學會看「趨勢」。</p>
+                        <p class="text-blue-800 font-medium">「看懂紅綠K線與牛熊市」</p>
+                        <p class="text-gray-600 text-sm">教您在空擋也能一眼看出股市現在是晴天還是雨天！我們第五堂見！</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- 頁尾導覽按鈕區 (需替換連結) -->
+        <footer class="mt-16 pt-8 border-t border-gray-200">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                
+                <!-- 【請替換位置：回首頁連結】 href 屬性內替換 URL -->
+                <a href="index.html" class="w-full sm:w-auto text-center px-8 py-3 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors duration-300">
+                    🏠 回首頁
+                </a>
+                
+                <!-- 【請替換位置：PDF下載連結】 href 屬性內替換 URL -->
+                <a href="https://u.pcloud.link/publink/show?code=kZODnI5Zh28jaWfIM1F0mQI7Qpkc8fnicpPy" class="w-full sm:w-auto text-center px-8 py-3 rounded-full bg-soft-blue text-blue-800 font-medium hover:bg-blue-200 transition-colors duration-300">
+                    📥 下載 PDF 資料
+                </a>
+
+                <!-- 【請替換位置：下一篇連結】 href 屬性內替換 URL -->
+                <a href="25-5.html" class="w-full sm:w-auto text-center px-8 py-3 rounded-full bg-text-dark text-white font-medium hover:bg-gray-700 shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                    查看下一篇 ➡️
+                </a>
+                
+            </div>
+            <div class="text-center mt-12 text-sm text-gray-400">
+                &copy; 2026 椏法工作室 | Yaffa Studio. All rights reserved.
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
