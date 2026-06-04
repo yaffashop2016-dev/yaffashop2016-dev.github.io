@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【從零開始存好股】第五堂：術語大集——聽懂股市「悄悄話」，別再當門外漢！</title>
+    <meta name="description" content="專為新手父母與上班族設計的股市術語教學。用最白話的日常語言拆解牛市熊市、K線圖、基本面四大指標、三大法人及進出場紀律心法，幫你守護家庭每一分錢。">
+    <meta name="keywords" content="存股, 股市術語, 理財新手, 投資理財, 定期定額, 三大法人, K線, EPS, 本益比">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pastelPink: '#FFF0F2',    /* 溫柔櫻粉 */
+                            pastelOrange: '#FFF3EB',  /* 暖陽柔橘 */
+                            pastelBlue: '#F0F7FF',    /* 晴空粉藍 */
+                            pastelGreen: '#EEF8F4',   /* 森林粉綠 */
+                            pastelYellow: '#FFFDF0',  /* 奶油粉黃 */
+                            accentPink: '#FF9EAA',    /* 點綴玫瑰粉 */
+                            accentOrange: '#FFD09B',  /* 點綴澄橘 */
+                            accentBlue: '#97C4F2',    /* 點綴湛藍 */
+                            accentGreen: '#A0D8B3',   /* 點綴嫩綠 */
+                            accentYellow: '#FFE3A8',  /* 點綴亮黃 */
+                            darkText: '#2D3748',      /* 深色優雅文字 */
+                            mutedText: '#718096'     /* 次要文字 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .custom-shadow {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+        }
+        .bubbly-border {
+            border-radius: 24px;
+        }
+    </style>
+</head>
+<body class="bg-[#FAF9F6] text-brand-darkText font-sans leading-relaxed">
+
+    <!-- 頁首與導覽 -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-extrabold text-xl tracking-tight text-brand-accentPink flex items-center gap-2">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                從零開始存好股
+            </span>
+            <div class="text-sm font-medium bg-brand-pastelPink text-brand-accentPink px-4 py-1.5 rounded-full">
+                第五堂：術語大集
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <article>
+            <!-- 投資風險聲明 -->
+            <div class="bg-brand-pastelYellow border-2 border-dashed border-brand-accentYellow/70 p-6 rounded-2xl mb-12 text-sm text-brand-mutedText">
+                <div class="flex items-center gap-2 mb-2 font-bold text-brand-darkText">
+                    <svg class="w-5 h-5 text-brand-accentYellow" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                    投資風險聲明
+                </div>
+                <p>本文僅為個人投資學習紀錄與心得分享，不構成任何投資建議。文中提及之股票、ETF、抽籤或交易方式，皆為個人實際操作經驗分享。投資有風險，市場價格可能上漲或下跌，獲利與虧損均應由投資人自行承擔。投資前請充分了解相關風險，並依自身財務狀況審慎評估。</p>
+            </div>
+
+            <!-- 主標題與前言 -->
+            <header class="text-center mb-16">
+                <p class="text-brand-accentPink font-bold tracking-widest uppercase mb-3">Lesson 05</p>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-brand-darkText tracking-tight mb-6">
+                    【從零開始存好股】第五堂：術語大集<br>
+                    <span class="text-brand-mutedText text-2xl md:text-3xl font-normal block mt-2">聽懂股市「悄悄話」，別再當門外漢！</span>
+                </h1>
+                <div class="w-24 h-1 bg-brand-accentPink mx-auto rounded-full mb-8"></div>
+                <div class="max-w-2xl mx-auto text-left bg-white p-8 bubbly-border custom-shadow border border-gray-100">
+                    <p class="mb-4 text-lg text-gray-600">
+                        在前面四堂課中，我們建立了心態、開了戶、了解了規則也算清了成本。
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        今天這堂課非常關鍵，我們要來聊聊股市裡的「語言」—— <strong>術語</strong>。
+                        平常工作忙、要顧小孩，偶爾點開財經新聞覺得像是聽外星語？「大盤牛氣沖天」、「法人買超」...別擔心，今天我們用最白話的日常例子，幫你輕鬆解碼！
+                    </p>
+                </div>
+            </header>
+
+            <!-- 模組一：市場天氣預報 -->
+            <section class="mb-16 bg-brand-pastelPink p-8 bubbly-border border border-brand-accentPink/30 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex-1">
+                        <div class="inline-block bg-brand-accentPink/20 text-brand-darkText font-bold text-xs px-3 py-1 rounded-full mb-4">模組一</div>
+                        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                            一、市場天氣預報：牛市 vs. 熊市
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            進入股市，最先要看的就是整體的「氣氛」。就像出門看天氣，市場也有晴天與陰雨。
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-white/80 p-4 rounded-xl">
+                                <h3 class="font-bold text-red-500 mb-1 flex items-center gap-2">
+                                    🐂 多頭 / 牛市 (Bull Market)
+                                </h3>
+                                <p class="text-sm text-gray-600">想像公牛攻擊時是用角由下往上頂。代表投資者對前景樂觀，預期股價持續上漲，買氣旺盛。</p>
+                            </div>
+                            
+                            <div class="bg-white/80 p-4 rounded-xl">
+                                <h3 class="font-bold text-green-700 mb-1 flex items-center gap-2">
+                                    🐻 空頭 / 熊市 (Bear Market)
+                                </h3>
+                                <p class="text-sm text-gray-600">想像黑熊攻擊時是用掌由上往下拍。代表市場信心低迷，股價長期下跌，甚至會出現恐慌性拋售。</p>
+                            </div>
+
+                            <div class="bg-white/80 p-4 rounded-xl">
+                                <h3 class="font-bold text-brand-darkText mb-1 flex items-center gap-2">
+                                    💎 權值股 (Blue Chip)
+                                </h3>
+                                <p class="text-sm text-gray-600">指市值大、對大盤指數有舉足輕重影響的公司。在台灣，台積電就是最大的權值股，它一動，全台股市都會跟著震動。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SVG 插圖：牛熊對抗 -->
+                    <div class="w-full md:w-72 flex justify-center">
+                        <svg class="w-60 h-60 text-brand-darkText" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 柔和背景圓 -->
+                            <circle cx="100" cy="100" r="80" fill="#FFEFEF" />
+                            <!-- 向上牛角與向下熊掌示意圖 -->
+                            <path d="M50,130 C50,100 80,70 100,70" stroke="#FF9EAA" stroke-width="8" stroke-linecap="round" />
+                            <path d="M100,70 L90,85 M100,70 L115,80" stroke="#FF9EAA" stroke-width="8" stroke-linecap="round" />
+                            <text x="45" y="155" fill="#FF9EAA" font-weight="bold" font-size="14">牛市向上頂</text>
+                            
+                            <path d="M150,70 C150,100 120,130 100,130" stroke="#A0D8B3" stroke-width="8" stroke-linecap="round" />
+                            <path d="M100,130 L110,115 M100,130 L85,120" stroke="#A0D8B3" stroke-width="8" stroke-linecap="round" />
+                            <text x="110" y="55" fill="#A0D8B3" font-weight="bold" font-size="14">熊市向下拍</text>
+                            
+                            <!-- 天秤支點 -->
+                            <circle cx="100" cy="100" r="10" fill="#2D3748" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模組二：看盤基本功 -->
+            <section class="mb-16 bg-brand-pastelBlue p-8 bubbly-border border border-brand-accentBlue/30">
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between gap-8">
+                    <div class="flex-1">
+                        <div class="inline-block bg-brand-accentBlue/20 text-brand-darkText font-bold text-xs px-3 py-1 rounded-full mb-4">模組二</div>
+                        <h2 class="text-2xl font-bold mb-4">二、看盤基本功：K線與走勢圖</h2>
+                        <p class="text-gray-600 mb-6">
+                            打開券商 App，看到那條紅紅綠綠的柱子，那就是<strong>K線 (Candlestick)</strong>。它能幫我們一眼看出當天的買賣角力。
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white/80 p-4 rounded-xl border border-red-100">
+                                <span class="inline-block px-2.5 py-0.5 bg-red-100 text-red-600 font-bold rounded-md text-xs mb-2">台股上漲</span>
+                                <h3 class="font-bold text-red-500 mb-1">🔴 紅K棒</h3>
+                                <p class="text-xs text-gray-500">代表收盤價高於開盤價。💡 注意：國際市場（如美股）通常用綠色代表漲喔。</p>
+                            </div>
+                            
+                            <div class="bg-white/80 p-4 rounded-xl border border-green-100">
+                                <span class="inline-block px-2.5 py-0.5 bg-green-100 text-green-700 font-bold rounded-md text-xs mb-2">台股下跌</span>
+                                <h3 class="font-bold text-green-700 mb-1">🟢 綠K棒</h3>
+                                <p class="text-xs text-gray-500">代表收盤價低於開盤價，股價今天跌了。</p>
+                            </div>
+
+                            <div class="bg-white/80 p-4 rounded-xl col-span-1 sm:col-span-2">
+                                <h3 class="font-bold text-brand-darkText mb-1">📏 上影線與下影線</h3>
+                                <p class="text-sm text-gray-600">K棒上下細細的線。上影線頂端代表當天<strong>最高價</strong>，下影線底端代表<strong>最低價</strong>。影線越長，代表當天波動越劇烈，買賣博弈激烈。</p>
+                            </div>
+
+                            <div class="bg-white/80 p-4 rounded-xl col-span-1 sm:col-span-2">
+                                <h3 class="font-bold text-brand-darkText mb-1">✨ 跳空 (Gap)</h3>
+                                <p class="text-sm text-gray-600">股價受重大利多或利空影響，今天的開盤價遠高於或遠低於昨天的收盤價，中間出現一個「缺口」。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SVG 插圖：K線教學 -->
+                    <div class="w-full md:w-64 flex justify-center">
+                        <svg class="w-56 h-60" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 背景 -->
+                            <rect width="160" height="200" rx="16" fill="#F4F9FF" />
+                            
+                            <!-- 紅K -->
+                            <line x1="50" y1="30" x2="50" y2="170" stroke="#FF9EAA" stroke-width="3" />
+                            <rect x="35" y="60" width="30" height="80" rx="4" fill="#FF9EAA" stroke="#FF8595" stroke-width="2" />
+                            <text x="50" y="25" text-anchor="middle" font-size="10" fill="#FF8595" font-weight="bold">最高價</text>
+                            <text x="50" y="185" text-anchor="middle" font-size="10" fill="#FF8595" font-weight="bold">最低價</text>
+                            <text x="15" y="70" font-size="10" fill="#2D3748">收盤價</text>
+                            <text x="15" y="145" font-size="10" fill="#2D3748">開盤價</text>
+
+                            <!-- 綠K -->
+                            <line x1="120" y1="50" x2="120" y2="150" stroke="#A0D8B3" stroke-width="3" />
+                            <rect x="105" y="70" width="30" height="50" rx="4" fill="#A0D8B3" stroke="#8BC89E" stroke-width="2" />
+                            <text x="120" y="65" text-anchor="middle" font-size="9" fill="#2D3748">開盤</text>
+                            <text x="120" y="130" text-anchor="middle" font-size="9" fill="#2D3748">收盤</text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模組三：基本面四大指標 -->
+            <section class="mb-16 bg-brand-pastelYellow p-8 bubbly-border border border-brand-accentYellow/30">
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-brand-accentYellow/40 text-brand-darkText font-bold text-xs px-3 py-1 rounded-full mb-3">模組三</div>
+                    <h2 class="text-2xl font-bold">三、評估公司好壞：基本面四大指標</h2>
+                    <p class="text-gray-600 mt-2">想幫孩子存教育基金的父母，這些術語能幫你判斷這家公司值不值得抱長線。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- EPS -->
+                    <div class="bg-white p-6 rounded-2xl border border-yellow-100 custom-shadow flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-pastelPink flex items-center justify-center flex-shrink-0 text-brand-accentPink font-black text-lg">1</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-darkText mb-2">EPS (每股盈餘)</h3>
+                            <p class="text-sm text-brand-mutedText mb-2">白話文：<strong>「公司每 1 股賺多少錢」</strong></p>
+                            <p class="text-sm text-gray-600">EPS 越高，代表公司的賺錢能力越強。</p>
+                        </div>
+                    </div>
+
+                    <!-- P/E Ratio -->
+                    <div class="bg-white p-6 rounded-2xl border border-yellow-100 custom-shadow flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-pastelOrange flex items-center justify-center flex-shrink-0 text-brand-accentOrange font-black text-lg">2</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-darkText mb-2">本益比 (P/E Ratio)</h3>
+                            <p class="text-sm text-brand-mutedText mb-2">計算公式：<strong>股價 ÷ EPS</strong></p>
+                            <p class="text-sm text-gray-600">可以理解為<strong>「你需要幾年才能回本」</strong>。在獲利不變下，本益比 10 倍代表需 10 年回本。通常本益比越高，代表股價越貴。</p>
+                        </div>
+                    </div>
+
+                    <!-- P/B Ratio -->
+                    <div class="bg-white p-6 rounded-2xl border border-yellow-100 custom-shadow flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-pastelBlue flex items-center justify-center flex-shrink-0 text-brand-accentBlue font-black text-lg">3</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-darkText mb-2">股價淨值比 (P/B Ratio)</h3>
+                            <p class="text-sm text-brand-mutedText mb-2">用來衡量<strong>股價相對於公司帳面資產的高低</strong></p>
+                            <p class="text-sm text-gray-600">如果淨值比小於 1，通常被認為是股價被低估（便宜），但也可能代表公司經營面臨挑戰。</p>
+                        </div>
+                    </div>
+
+                    <!-- Dividend Yield -->
+                    <div class="bg-white p-6 rounded-2xl border border-yellow-100 custom-shadow flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-pastelGreen flex items-center justify-center flex-shrink-0 text-brand-accentGreen font-black text-lg">4</div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-darkText mb-2">殖利率 (Dividend Yield)</h3>
+                            <p class="text-sm text-brand-mutedText mb-2">白話文：<strong>存股的「年利率」</strong></p>
+                            <p class="text-sm text-gray-600">計算方式：<strong>現金股利 ÷ 股價</strong>。對想固定領息的族群來說，殖利率 <strong>5% 以上</strong>通常被視為不錯的目標。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模組四：到底是誰在買 -->
+            <section class="mb-16 bg-brand-pastelGreen p-8 bubbly-border border border-brand-accentGreen/30">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex-1">
+                        <div class="inline-block bg-brand-accentGreen/20 text-brand-darkText font-bold text-xs px-3 py-1 rounded-full mb-4">模組四</div>
+                        <h2 class="text-2xl font-bold mb-4">四、到底是誰在買？三大法人 vs. 散戶</h2>
+                        <p class="text-gray-600 mb-6">了解股市裡的「大咖」動向，是新手擺脫盲目跟風、穩健進階的必經之路。</p>
+
+                        <!-- 三大法人 -->
+                        <div class="mb-6">
+                            <h3 class="font-bold text-brand-darkText mb-3 flex items-center gap-2">
+                                <span class="px-2 py-0.5 bg-brand-accentGreen text-white text-xs rounded">超級巨頭</span> 三大法人
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="bg-white/85 p-3.5 rounded-xl border border-green-50">
+                                    <strong class="text-brand-darkText">1. 外資：</strong>
+                                    <span class="text-sm text-gray-600">國外的機構投資者，資金量最龐大，通常看重公司基本面和全球產業趨勢。</span>
+                                </div>
+                                <div class="bg-white/85 p-3.5 rounded-xl border border-green-50">
+                                    <strong class="text-brand-darkText">2. 投信：</strong>
+                                    <span class="text-sm text-gray-600">國內的基金公司（基金經理人代操），有短中期的績效與排名壓力，擅長操作中小型飆股。</span>
+                                </div>
+                                <div class="bg-white/85 p-3.5 rounded-xl border border-green-50">
+                                    <strong class="text-brand-darkText">3. 自營商：</strong>
+                                    <span class="text-sm text-gray-600">證券商自己的投資部門，拿公司的錢操作，投資風格偏向極短線。</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 散戶 -->
+                        <div class="bg-white/60 p-4 rounded-xl border border-dashed border-brand-accentGreen">
+                            <h3 class="font-bold text-brand-darkText mb-1 flex items-center gap-2">
+                                🧍 散戶 (Retail Investor)
+                            </h3>
+                            <p class="text-sm text-gray-600">
+                                就是你、我，或是隔壁巷口的王大媽。指的是開戶買賣股票的<strong>個別自然人</strong>。散戶的資金最分散、資訊通常落後，容易受心理情緒影響而追高殺低。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SVG 插圖：三大法人與散戶天平 -->
+                    <div class="w-full md:w-64 flex justify-center">
+                        <svg class="w-56 h-56" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" fill="#E8F6F0" />
+                            <!-- 大咖資金箱 -->
+                            <rect x="40" y="80" width="50" height="50" rx="8" fill="#A0D8B3" />
+                            <text x="65" y="105" fill="white" font-size="12" font-weight="bold" text-anchor="middle">法人</text>
+                            <text x="65" y="122" fill="white" font-size="9" text-anchor="middle">大資金</text>
+
+                            <!-- 散戶小荷包 -->
+                            <circle cx="145" cy="115" r="20" fill="#FF9EAA" />
+                            <text x="145" y="118" fill="white" font-size="11" font-weight="bold" text-anchor="middle">散戶</text>
+                            
+                            <!-- 箭頭 -->
+                            <path d="M100,60 L100,150" stroke="#718096" stroke-width="2" stroke-dasharray="4,4" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 五、交易實務與心法術語 -->
+            <section class="mb-16 bg-white p-8 bubbly-border border border-gray-100 custom-shadow">
+                <h2 class="text-2xl font-bold mb-6 text-center text-brand-darkText">五、交易實務與心法術語</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-brand-pastelPink/50 p-5 rounded-2xl border border-brand-pastelPink">
+                        <h3 class="font-bold mb-2 flex items-center gap-2 text-brand-darkText">
+                            📊 做多 (Long) vs. 放空 (Short)
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            看好股票會漲，先買進等待上漲叫<strong>「做多」</strong>；看壞股票會跌，先向券商借股票來賣，等價格跌下去再買回來還，叫<strong>「放空」</strong>。
+                        </p>
+                    </div>
+
+                    <div class="bg-red-50/50 p-5 rounded-2xl border border-red-100">
+                        <h3 class="font-bold mb-2 flex items-center gap-2 text-red-600">
+                            ⚠️ 違約交割（最嚴重的地雷！）
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            買了股票卻在 <strong>T+2 日上午 10:00 前</strong>，交割帳戶扣款資金不足。這會導致個人信用徹底破產，未來想申請房貸、信用卡都會寸步難行。
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-pastelOrange/50 p-5 rounded-2xl border border-brand-pastelOrange">
+                        <h3 class="font-bold mb-2 flex items-center gap-2 text-brand-darkText">
+                            🏠 套牢 (Trapped)
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            買進後股價不漲反跌，不甘心賠錢賣出（割肉），只好一直把股票放著不理，俗稱<strong>「住進套房裡」</strong>。
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-pastelBlue/50 p-5 rounded-2xl border border-brand-pastelBlue">
+                        <h3 class="font-bold mb-2 flex items-center gap-2 text-brand-darkText">
+                            🌸 填權息 vs. 貼息
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            配息後股價會往下調。若股價能漲回配息前的價格，才算真正賺到股息（<strong>填權息</strong>）。如果股價一直沒漲回來，就是<strong>「貼息」</strong>，代表你賺了股利卻賠了股價。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 六、行為心理學 -->
+            <section class="mb-16 bg-brand-pastelOrange p-8 bubbly-border border border-brand-accentOrange/30">
+                <div class="max-w-3xl mx-auto text-center">
+                    <span class="inline-block bg-brand-accentOrange/40 text-brand-darkText font-bold text-xs px-3 py-1 rounded-full mb-3">行為心理學</span>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-darkText">六、新手必戒掉的「三大心理偏誤」</h2>
+                    <p class="text-gray-600 mb-8">剛踏入股市的我們，最容易焦慮緊張。記住這三個名詞，當心情起伏時拿出來提醒自己！</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                        <div class="bg-white p-5 rounded-xl border border-orange-100">
+                            <span class="text-2xl mb-2 block">😱</span>
+                            <h3 class="font-bold text-brand-darkText mb-2">FOMO (怕錯過)</h3>
+                            <p class="text-xs text-gray-600">看到同事買某支熱門股賺錢，自己就急著衝進去，完全沒研究價格與風險，深怕自己落單。</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-orange-100">
+                            <span class="text-2xl mb-2 block">🐑</span>
+                            <h3 class="font-bold text-brand-darkText mb-2">羊群效應 (從眾)</h3>
+                            <p class="text-xs text-gray-600">放棄獨立思考，盲信「大家都買應該沒問題」，結果最後成了主力割韭菜的對象。</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-orange-100">
+                            <span class="text-2xl mb-2 block">⚓</span>
+                            <h3 class="font-bold text-brand-darkText mb-2">錨定效應 (執著)</h3>
+                            <p class="text-xs text-gray-600">太執著於「我當初買在 100 元」，跌到 80 元也不肯認錯，忽略了公司基本面其實早已變壞的事實。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 核心板塊：進出場時機 SOP -->
+            <section class="mb-16 bg-white border border-gray-100 rounded-3xl p-8 custom-shadow">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-extrabold text-brand-darkText">建立你的交易 SOP：別再憑感覺</h2>
+                    <p class="text-brand-mutedText mt-2">成功的投資不是靠完美的預測，而是靠堅定的紀律。</p>
+                </div>
+
+                <div class="space-y-10">
+                    <!-- 進場 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-darkText border-l-4 border-brand-accentPink pl-3 mb-6">🎯 一、進場時機：三種不同流派的起手式</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-brand-pastelPink/40 p-5 rounded-2xl border border-brand-pastelPink">
+                                <h4 class="font-bold text-brand-darkText mb-2">1. 定期定額 (微笑曲線)</h4>
+                                <span class="inline-block bg-brand-accentPink/20 text-brand-darkText text-xs font-semibold px-2 py-0.5 rounded mb-3">上班族首選</span>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    每月固定日期扣款，自動在股價高時買少、低時買多，平均持股成本。只要趨勢長期向上（如大盤型 ETF 0050），回升後獲利非常穩健。
+                                </p>
+                            </div>
+
+                            <div class="bg-brand-pastelBlue/40 p-5 rounded-2xl border border-brand-pastelBlue">
+                                <h4 class="font-bold text-brand-darkText mb-2">2. 技術流 (指標黃金交叉)</h4>
+                                <span class="inline-block bg-brand-accentBlue/20 text-brand-darkText text-xs font-semibold px-2 py-0.5 rounded mb-3">動能交易</span>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    當股價由下往上突破 20日均線（月線）或 60日均線（季線）時視為轉強。或 KD 指標的 K 值在低檔（小於20）向上穿過 D 值時黃金交叉。
+                                </p>
+                            </div>
+
+                            <div class="bg-brand-pastelGreen/40 p-5 rounded-2xl border border-brand-pastelGreen">
+                                <h4 class="font-bold text-brand-darkText mb-2">3. 價值流 (便宜價逢低布局)</h4>
+                                <span class="inline-block bg-brand-accentGreen/20 text-brand-darkText text-xs font-semibold px-2 py-0.5 rounded mb-3">逢低撿便宜</span>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    當優質企業（如台積電）的本益比（P/E）或淨值比（P/B）降到歷史低檔區。採用<strong>分批布局法</strong>：資金分 5 份，每跌 5% 投入 1 份，越跌心越安。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 出場 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-darkText border-l-4 border-brand-accentGreen pl-3 mb-6">🚪 二、出場時機：學會認輸與獲利了結的藝術</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- 止損 -->
+                            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                                <h4 class="font-bold text-red-500 mb-3 flex items-center gap-2">
+                                    🛡️ 1. 守護本金：止損 (Stop Loss)
+                                </h4>
+                                <ul class="space-y-3 text-xs text-gray-600">
+                                    <li><strong>百分比停損：</strong>預先設定虧損 10% 或 15% 無條件認賠，防止本金被攔腰砍斷。</li>
+                                    <li><strong>技術位停損：</strong>當股價跌破重要均線（如季線 60MA）且三天站不回來，代表趨勢已壞。</li>
+                                    <li><strong>基本面停損：</strong>當初買進的理由（例如看好的獲利、產業前景）已經消失，立刻賣出。</li>
+                                </ul>
+                            </div>
+
+                            <!-- 停利 -->
+                            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                                <h4 class="font-bold text-brand-darkText mb-3 flex items-center gap-2">
+                                    💰 2. 獲利落袋：停利 (Take Profit)
+                                </h4>
+                                <ul class="space-y-3 text-xs text-gray-600">
+                                    <li><strong>目標達成法：</strong>達到預設報酬率（如 10% 或 20%）時，先出脫一半持股落袋為安，另一半抱到趨勢反轉。</li>
+                                    <li><strong>乖離過大：</strong>股價離均線太遠（漲太兇）或觸碰布林通道上軌回落，代表短線過熱，減碼好時機。</li>
+                                    <li><strong>警訊天量：</strong>高檔出現長長的「上影線」，並爆出天量，往往是主力在倒貨的信號。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 一半一半策略 -->
+                    <div class="bg-brand-pastelYellow/70 p-6 rounded-2xl border border-brand-accentYellow">
+                        <h4 class="font-bold text-brand-darkText mb-2 flex items-center gap-2">
+                            💡 專家心法：猶豫不決時的「一半一半策略」
+                        </h4>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            如果你現在手頭有一筆錢，心裡想著「現在買會不會太貴？」但又怕「現在不買會不會繼續漲？」建議採用折衷方案：
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-600">
+                            <div class="bg-white p-3.5 rounded-xl"><strong>50% 單筆投入：</strong>確保你已經「上車」，若市場繼續漲，不會因踏空而焦慮。</div>
+                            <div class="bg-white p-3.5 rounded-xl"><strong>50% 定期定額：</strong>設定接下來 6 到 12 個月慢慢扣完。若市場下跌，你還有子彈可分批攤平成本，心態極度放鬆。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 結語 -->
+            <footer class="text-center bg-[#FAF9F6] border-2 border-brand-accentPink/30 p-8 rounded-3xl mb-12">
+                <span class="text-3xl block mb-4">🏆</span>
+                <h3 class="text-xl font-bold mb-3 text-brand-darkText">結語：每次投資都寫下交易日記</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed mb-6">
+                    學會術語，是為了能聽懂市場在說什麼，才能守護好家庭的每一分錢。術語是工具，不是教條。即便看懂了所有指標，如果禁不起市場的情緒誘惑，那依然會受傷。唯有嚴守紀律，你才能在股市馬拉松中笑到最後。
+                </p>
+                <div class="inline-block bg-brand-darkText text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wider">
+                    金句：訊號出現就開槍進場，方向不對立刻撤退停損。
+                </div>
+            </footer>
+        </article>
+
+        <!-- 下一堂預告 -->
+        <div class="bg-brand-pastelBlue border border-brand-accentBlue p-8 rounded-3xl mb-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-left">
+                <span class="text-xs font-bold text-brand-accentBlue uppercase tracking-widest block mb-1">Next Lesson Preview</span>
+                <h4 class="text-lg font-bold text-brand-darkText mb-1">下一堂預告：第六堂：零股交易</h4>
+                <p class="text-sm text-gray-600">小資父母也能當台積電股東！不需要100萬，只要1,000元教你精準切入！</p>
+            </div>
+            <div class="flex-shrink-0">
+                <span class="px-4 py-2 bg-brand-accentBlue text-white rounded-full text-xs font-bold shadow-md">我們第六堂見！</span>
+            </div>
+        </div>
+
+        <!-- 導航與下載（連結預留位置） -->
+        <div class="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- 【注意：請在此替換為您下一篇網頁的 URL】 -->
+            <a href="25-6.html" class="w-full sm:w-auto text-center px-6 py-3 bg-brand-accentPink hover:bg-[#FF8595] text-white font-bold rounded-xl transition duration-300 shadow-sm flex items-center justify-center gap-2">
+                查看下一篇：第六堂
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+            
+            <!-- 【注意：請在此替換為您 PDF 檔案的實際下載路徑】 -->
+            <a href="https://u.pcloud.link/publink/show?code=kZODnI5Zh28jaWfIM1F0mQI7Qpkc8fnicpPy" class="w-full sm:w-auto text-center px-6 py-3 bg-white hover:bg-gray-50 text-brand-darkText font-bold rounded-xl border border-gray-200 transition duration-300 shadow-sm flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 text-brand-mutedText" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                下載 PDF 原文資料
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 py-8 text-center text-xs text-brand-mutedText">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>©  椏法工作室 | Yaffa Studio. All Rights Reserved. 個人理財學習心得筆記</p>
+        </div>
+    </footer>
+
+</body>
+</html>
